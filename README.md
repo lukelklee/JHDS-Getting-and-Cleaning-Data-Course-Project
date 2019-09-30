@@ -26,7 +26,7 @@ y_test.txt
 ### Details of run_analysis.R
 (also in the comments of the script)
 
-1. Loads the "dplyr" package
+1. Loads the "dplyr" package.
 2. Sets R/RStudio's numerical display to 10 significant digits, to check that the precision of the raw data is maintained throughout the processes.
 STEP 1
 3. Reads the 8 raw data files into 8 data frames.
@@ -37,16 +37,10 @@ STEP 1
 STEP 2
 8. Selects the columns of "mergedData" with column names matching "mean()" or "std()"; constructs a new data frame called "selectedData" for the selected columns; keeps the "Subject" and "Activity" columns.
 STEP 3
-9. Coerces the labels in the extracted "activity_labels" data frame from "factor" to "character" data type; replaces the activity labels in "selectedData" with their corresponding verbal description, which is in the 2nd column of 
-
-"activity_labels".
+9. Coerces the labels in the extracted "activity_labels" data frame from "factor" to "character" data type; replaces the activity labels in "selectedData" with their corresponding verbal description, which is in the 2nd column of "activity_labels".
 STEP 4
-10. Column names of "Subject" and "Activity" have been included. To repsect the Code Book from features_info.txt 
-
-that comes with the data set, column names will be made identical to the feature names provided in the features.txt.
+10. Column names of "Subject" and "Activity" have been included. To repsect the Code Book from features_info.txt that comes with the data set, column names will be made identical to the feature names provided in the features.txt.
 STEP 5
-11. Groups the rows in the data frame by factors from the columns of "Subject" and "Activity", using the "group_by" 
-
-function from the "dplyr" package.
+11. Groups the rows in the data frame by factors from the columns of "Subject" and "Activity", using the "group_by" function from the "dplyr" package.
 12. Applies the "mean()" function to all the variables of the groups; creates a new data frame based on the groups, using the "summarize_all" function from the "dplyr" package; column names of the new data frame are appended with "Group_Average" for clarification.
 13. The result is in the data frame "summaryData".
