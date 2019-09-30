@@ -1,4 +1,4 @@
-Study Design
+## Study Design
 
 Raw data used in this project are obtained from a UC Irvine project : Human Activity Recognition Using Smartphones Data Set. You can download the raw data here : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. Data obtained and processed in this project are presented as data frames following the variable or column names originally intended. The raw data have a total of 563 variables : "Subject", "Activity", and 561 features of time- and frequency domain variables. Data processing includes merging, subsetting, labeling, grouping and group-averaging (summarizing) of the raw data. The as-processed data will have variables representing the group averages (by "Subject" and "Activity") of the raw data. For claraification, the processed variables are renamed by appending "Group_Average" to their original variable names.
 
@@ -8,21 +8,21 @@ Data acquisition and the associated preprocessing are described in the README.tx
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details."
 
-All the raw data used in this course project come from the following 8 files in the data package:
+All the raw data used in this course project come from the following 8 files in the data package:<br/>
+<br/>
+activity_labels.txt<br/>
+features.txt<br/>
+subject_train.txt<br/>
+X_train.txt<br/>
+y_train.txt<br/>
+subject_test.txt<br/>
+X_test.txt<br/>
+y_test.txt<br/>
 
-activity_labels.txt
-features.txt
-subject_train.txt
-X_train.txt
-y_train.txt
-subject_test.txt
-X_test.txt
-y_test.txt
 
+## Code Book
 
-Code Book
-
-Raw Data
+**Raw Data**
 
 There are "Subject", "Activity" and 561 feature variables (total of 563 variables).<br/>
 The 561 feature variables are based on 17 normalized physical variables (time- and frequency-domain data from accelerometers and gyroscopes): tBodyAcc-XYZ, tGravityAcc-XYZ, tBodyAccJerk-XYZ, tBodyGyro-XYZ, tBodyGyroJerk-XYZ, tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag, fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccMag, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag; the rest of the features are the estimation/derivation from these 17 variables.<br/>
@@ -54,7 +54,7 @@ When variable names contain "Gyro", the their units are radians/second.<br/>
 | fBodyGyroJerkMag    | Double      | [-1,1]     | rad/sec  |
 
 
-Processed Data
+**Processed Data**
 
 There are "Subject", "Activity" and 66 feature variables (total of 68 variables).<br/>
 66 feature variables that are the estimation of mean and standard deviation, as shown by their variable names consisting of either "mean()" or "std()", are selcted out of the 561 features from the raw data, and put into a new data frame "selectedData". Data of the "selectedData" are grouped by "Subject" and "Activity", and the group averages of the selected features are calculated using the "summarize_all" function from the "dplyr" package. A new data frame "summaryData" is created to accomodate the grouped-and-averaged data. Variable/column names of the "summaryData" are appended with "Group_Average" for clarification.<br/>
