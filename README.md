@@ -35,13 +35,9 @@ STEP 1
 6. Binds (row-binds) the "trainData" and "testData" into "mergedData".
 7. Assigns proper column names such as "Subject", "Activity" and the feature names read from features.txt to "mergedData".
 STEP 2
-8. Selects the columns of "mergedData" with column names matching "mean()" or "std()"; constructs a new data frame 
-
-called "selectedData" for the selected columns; keeps the "Subject" and "Activity" columns.
+8. Selects the columns of "mergedData" with column names matching "mean()" or "std()"; constructs a new data frame called "selectedData" for the selected columns; keeps the "Subject" and "Activity" columns.
 STEP 3
-9. Coerces the labels in the extracted "activity_labels" data frame from "factor" to "character" data type; replaces 
-
-the activity labels in "selectedData" with their corresponding verbal description, which is in the 2nd column of 
+9. Coerces the labels in the extracted "activity_labels" data frame from "factor" to "character" data type; replaces the activity labels in "selectedData" with their corresponding verbal description, which is in the 2nd column of 
 
 "activity_labels".
 STEP 4
@@ -52,13 +48,5 @@ STEP 5
 11. Groups the rows in the data frame by factors from the columns of "Subject" and "Activity", using the "group_by" 
 
 function from the "dplyr" package.
-12. Applies the "mean()" function to all the variables of the groups; creates a new data frame based on the groups, 
-
-using the "summarize_all" function from the "dplyr" package; column names of the new data frame are appended with 
-
-"Group_Average" for clarification.
+12. Applies the "mean()" function to all the variables of the groups; creates a new data frame based on the groups, using the "summarize_all" function from the "dplyr" package; column names of the new data frame are appended with "Group_Average" for clarification.
 13. The result is in the data frame "summaryData".
-
-
-
-
