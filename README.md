@@ -7,16 +7,15 @@ system. You should also install the "dplyr" package in R/RStudio.
 1. There should be 9 files in the R/RStudio's working directory. The R script to run in R/RStudio is : run_analysis.R. The raw data files can be downloaded from the link provided on the course webpage : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. You will first need to unzip 
 the package and then identify the files in the unzipped folders. Please place the following 9 files in R/RStudio's 
 working directory :<br/>
-
-run_analysis.R
-activity_labels.txt
-features.txt
-subject_train.txt
-X_train.txt
-y_train.txt
-subject_test.txt
-X_test.txt
-y_test.txt
+run_analysis.R<br/>
+activity_labels.txt<br/>
+features.txt<br/>
+subject_train.txt<br/>
+X_train.txt<br/>
+y_train.txt<br/>
+subject_test.txt<br/>
+X_test.txt<br/>
+y_test.txt<br/>
 
 2. Install the "dplyr" package in R/RStudio, by running the script : install.packages("dplyr")
 
