@@ -2,7 +2,7 @@ To run the analysis in this course project you should have the latest version of
 script attached in the GitHub repository was tested using RStudio version 1.2.1335 installed on a Windows 8 operating 
 system. You should also install the "dplyr" package in R/RStudio.
 
-## The step-by-step recipe for this data processing/analysis is as follows :
+### The step-by-step recipe for this data processing/analysis
 
 1.
 There should be 9 files in the R/RStudio's working directory.
