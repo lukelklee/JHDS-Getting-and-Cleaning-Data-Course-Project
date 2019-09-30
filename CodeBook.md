@@ -8,7 +8,7 @@ Data acquisition and the associated preprocessing are described in the README.tx
 <br/>
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details."*<br/>
 <br/>
-All the raw data used in this course project come from the following 8 files in the data package:<br/>
+All the raw data used in this course project come from the following 8 files in the data package :<br/>
 <br/>
 activity_labels.txt<br/>
 features.txt<br/>
@@ -53,7 +53,7 @@ When variable names contain "Gyro", the their units are radians/second.<br/>
 | fBodyAccJerkMag     | Double      | [-1,1]     | g        |
 | fBodyGyroMag        | Double      | [-1,1]     | rad/sec  |
 | fBodyGyroJerkMag    | Double      | [-1,1]     | rad/sec  |
-
+<br/>
 
 **Processed Data**
 
@@ -65,14 +65,9 @@ The activity labels (2nd column) of the processed data frame summaryData are rep
 
 | Variable            | Type        | Range                | Unit     |
 | ------------------- | ----------- | -------------------- |--------- |
-| Activity            | Character   | WALKING
-              | NA       |
+| Activity            | Character   | WALKING              | NA       |
 |                     |             | WALKING_UPSTAIRS     |          |
 |                     |             | WALKING_DOWNSTAIRS   |          |
-|                     |             | SITTING
-              |          |
-|                     |             | STANDING
-
-             |          |
-|                     |             | LAYING
-               |          |
+|                     |             | SITTING              |          |
+|                     |             | STANDING             |          |
+|                     |             | LAYING               |          |
